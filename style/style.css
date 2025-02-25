@@ -115,6 +115,9 @@ main .container .utama img {
     border-radius: 1rem;
     margin: 0.5rem 0;
 }
+main .container .utama .anywhere a {
+    display: none;
+}
 main .container .utama .only-laptop {
     display: none;
 }
@@ -157,9 +160,27 @@ main .container p {
 main .container .products figure {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
+    gap: 0.5rem;
+}
+main .container .products figure > div {
+    display: grid;
+    grid-template-rows: 1fr 10%;
 }
 main .container .products figure img {
     width: 100%;
+}
+main .container .products figure h4 {
+    font-size: 0.75rem;
+    margin: 0.5rem 0;
+}
+main .container .products figure .text {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.75rem;
+    margin-bottom: 1rem;
+}
+main .container .products figure .text .star img {
+    width: 0.75rem;
 }
 
 
@@ -189,6 +210,26 @@ footer {
         width: 35rem;
     }
 
+    main .container .utama .anywhere {
+        position: relative;
+    }
+    main .container .utama .anywhere a {
+        display: flex;
+        align-items: center;
+        text-decoration: none;
+        position: absolute;
+        bottom: 2rem;
+        left: 3rem;
+        z-index: 5;
+        color: white;
+    }
+    main .container .utama .anywhere a:hover {
+        text-decoration: underline;
+    }
+    main .container .utama a svg {
+        width: 1.8rem;
+    }
+
     main .container .categories figure {
         display: grid;
         grid-template-columns: repeat(4, 1fr);
@@ -201,6 +242,9 @@ footer {
     main .container .products figure {
         grid-template-columns: repeat(4, 1fr);
         gap: 1rem;
+    }
+    main .container .products div h4 {
+        font-size: 1.12rem;
     }
 }
 
@@ -253,7 +297,7 @@ footer {
     .only-laptop {
         display: block;
     }
-    .only-laptop a {
+    header .only-laptop a {
         color: black;
         text-decoration: none;
     }
@@ -278,6 +322,10 @@ footer {
     main .container .utama {
         display: grid;
         grid-template-columns: 20% 80%;
+    }
+    main .container .utama .anywhere a {
+        left: 4rem;
+        bottom: 4rem;
     }
     main .container .utama .only-laptop {
         display: flex;
