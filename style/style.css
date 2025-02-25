@@ -1,0 +1,321 @@
+
+* {
+    box-sizing: border-box;
+    font-family: "Inter";
+    padding: 0;
+    margin: 0;
+}
+.container {
+    padding: 0 1rem;
+}
+
+/* title */
+.title-discount {
+    color: white;
+    background-color: black;
+    text-align: center;
+    font-size: 2.7vw;
+    padding: 0.8rem;
+}
+
+/* header */
+header {
+    margin: 1.5rem 0 0 0;
+}
+header .container .header {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+header .search form {
+    width: 15rem;
+    display: flex;
+    align-items: center;
+    position: relative;
+    border-radius: 0.5rem;
+}
+header .search form input{
+    background-color: rgb(233, 233, 233);
+    border: 0 none;
+    padding: 0.8rem;
+    width: 15rem;
+    border-radius: 0.5rem;
+}
+header .search img {
+    /* height: 1rem; */
+    position: absolute;
+    right: 0.5rem;
+}
+
+header .container .header img{
+    width: 1.3rem;
+}
+
+.navigation-for-laptop {
+    display: none;
+}
+.only-laptop {
+    display: none;
+}
+
+/* navigasi layang */
+.burger {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+nav .burger div {
+    border: 1.5px solid black;
+    width: 1.2rem;
+    margin-top: 0.2rem;
+}
+.navigation-for-mobile-and-tablet .navigation {
+    display: none;
+    position: absolute;
+    z-index: 2;
+    /* padding: 0.5rem 0; */
+    width: 10rem;
+    border-radius: 1rem;
+    right: 0;
+    top: 1rem;    
+    background-color: white;
+}
+.navigation a {
+    display: block;
+    text-decoration: none;
+    color: rgb(82, 82, 82);
+    padding: 0.5rem;
+    width: auto;
+}
+.navigation a:nth-child(1) {
+    border-top-right-radius: 1rem;
+    border-top-left-radius: 1rem;
+}
+.navigation a:nth-child(4) {
+    border-bottom-right-radius: 1rem;
+    border-bottom-left-radius: 1rem;
+}
+.navigation-for-mobile-and-tablet .burger:hover .navigation {
+    display: block;
+}
+.navigation a:hover {
+    background-color: lightgray;
+}
+
+
+/* main */
+main {
+    margin: 2rem 0;
+}
+main .container .utama img {
+    width: 100%;
+    border-radius: 1rem;
+    margin: 0.5rem 0;
+}
+main .container .utama .only-laptop {
+    display: none;
+}
+
+/* category */
+/* head */
+main .container .head {
+    margin: 0.5rem 0;
+    display: flex;
+    justify-content: space-between;
+}
+main .container .head .arrow {
+    display: flex;
+    gap: 0.2rem;
+}
+.arrow-left, .arrow-right {
+    background-color: rgb(237, 237, 237);
+    border-radius: 1rem;
+    padding: 0.2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.arrow-left img, .arrow-right img {
+    width: 1rem;
+}
+
+/* figure */
+main .container .categories figure img {
+    width: 7rem;
+}
+main .container figure {
+    margin: 1rem 0;
+}
+
+/* products */
+main .container p {
+    color: red;
+}
+main .container .products figure {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+main .container .products figure img {
+    width: 100%;
+}
+
+
+/* footer */
+footer {
+    background-color: black;
+    color: white;
+    text-align: center;
+    padding: 0.5rem;
+    font-size: 2.7vw;
+}
+
+
+@media (min-width: 490px) {
+    .container {
+        padding: 0 3rem;
+    }
+
+    .title-discount {
+        font-size: 1rem;
+    }
+
+    header .search form {
+        width: 35rem;
+    }
+    header .search form input {
+        width: 35rem;
+    }
+
+    main .container .categories figure {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 1rem;
+    }
+    main .container .categories figure img {
+        width: 100%;
+    }
+
+    main .container .products figure {
+        grid-template-columns: repeat(4, 1fr);
+        gap: 1rem;
+    }
+}
+
+@media (min-width: 1024px) {
+    .title-discount {
+        display: grid;
+        grid-template-columns: 1fr 10%;
+        padding: 1rem;
+    }
+    .title-discount .only-laptop {
+        display: flex;
+        gap: 0.2rem;
+        position: relative;
+        align-items: center;
+        padding: 0.5rem 0.8rem;
+        width: 6rem;
+        margin: -0.5rem;
+        background-color: red;
+        border-radius: 0.5rem;
+    }
+    .title-discount .only-laptop div {
+        display: none;
+        position: absolute;
+        z-index: 5;
+        background-color: white;
+        width: 15rem;
+        top: 2rem;
+        right: 0;
+        border-radius: 0.5rem;
+        overflow: hidden;
+        text-align: left;
+    }
+    .title-discount .only-laptop:hover div {
+        display: block;
+    }
+    .title-discount .only-laptop div a {
+        padding: 0.5rem;
+        display: block;
+        color: rgb(109, 109, 109);
+    }
+    .title-discount .only-laptop div a:hover {
+        background-color: rgb(188, 188, 188);
+    }
+
+    header .container {
+        display: grid;
+        grid-template-columns: 25% 75%;
+        align-items: center;
+    }
+    .only-laptop {
+        display: block;
+    }
+    .only-laptop a {
+        color: black;
+        text-decoration: none;
+    }
+    .navitagion-for-laptop a:hover {
+        text-decoration: underline;
+    }
+    .navitagion-for-laptop {
+        display: flex;
+        gap: 5rem;
+        margin-right: 5rem;
+    }
+    .burger {
+        display: none;
+    }
+    header .search form {
+        width: 15rem;
+    }
+    header .search form input{
+        width: 15rem;
+    }
+
+    main .container .utama {
+        display: grid;
+        grid-template-columns: 20% 80%;
+    }
+    main .container .utama .only-laptop {
+        display: flex;
+        flex-direction: column;
+        gap: 1.5rem;
+    }
+    main .container .utama .only-laptop a {
+        text-decoration: none;
+        color: black;
+    }
+    main .container .utama .only-laptop a:hover {
+        text-decoration: underline;
+    }
+
+
+    main .container .head h4{
+        font-size: xx-large;
+        margin-bottom: 1.5rem;
+    }
+    main .container .head .arrow {
+        height: 2rem;
+    }
+    main .container .head .arrow .arrow-left, main .container .head .arrow .arrow-right {
+        width: 2.5rem;
+        height: 2.5rem;
+        border-radius: 100%;
+    }
+    main .container .categories {
+        margin: 4rem 0;
+    }
+    main .container .categories figure {
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        gap: 1rem;
+    }
+
+    footer {
+        padding: 1rem;
+        font-size: 1rem;
+    }
+}
